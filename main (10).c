@@ -42,7 +42,7 @@ int main()
             printf("\ne) Egg Burger + Batata - R$ 24,00");
             printf("\nf) French Onion Burger + Batata - R$ 30,00");
             printf("\ng) Garden Veggie Burger + Batata - R$ 26,00\n");
-             printf("\033[0m"); //fecha cor
+             printf("\033[0m"); 
     
         for (int i = 0; i < 4; i++){
             do{ 
@@ -51,7 +51,7 @@ int main()
                     printf("\n%dº Pedido:", i + 1);
                     printf("\nCódigo do pedido: ");
                     scanf(" %c", &codigo[i]);
-                    codigo[i] = toupper(codigo[i]);//para ler como letras maiúsculo
+                    codigo[i] = toupper(codigo[i]);
                 
                         
                         switch(codigo[i]){
@@ -102,7 +102,7 @@ int main()
               do {
                 printf("\nDeseja fazer mais algum pedido? (s ou n): ");
                 scanf(" %c", &codigoResposta);
-                codigoResposta = tolower(codigoResposta); // Transforma a resposta em letra minúscula
+                codigoResposta = tolower(codigoResposta); 
                 
                 if(codigoResposta != 's' && codigoResposta != 'n') {
                     printf("\nResposta inválida.\n");
@@ -118,7 +118,7 @@ int main()
            qtd=0;
             printf("\nSexo do cliente (m/f ou o): ");
             scanf(" %c", &sexo[i]);
-            sexo[i] = tolower(sexo[i]); // Transforma a resposta em letra minúscula
+            sexo[i] = tolower(sexo[i]); 
             
             if(sexo[i] != 'm' && sexo[i] != 'f' && sexo[i] != 'o'){
                 printf("\nSexo inválido\n");
@@ -129,32 +129,32 @@ int main()
             }
         } while(sexo[i] != 'm' && sexo[i] != 'f' && sexo[i] != 'o');
     }
-     do {  //Do para ser possível retornar menu principal 
-         printf("\033[31m"); //abre cor
+     do {  
+         printf("\033[31m"); 
          
          printf("\nEscolha o que deseja fazer:\n");
         
-         printf("\033[0m"); //fecha cor
+         printf("\033[0m"); 
          
-         printf ("\033[36m"); //abre cor
+         printf ("\033[36m"); 
          
          printf("\n1) Ver informação de pedidos baseado no código: ");
          printf("\n2) Ver informações de todos os pedidos cadastrados: ");
          printf("\n3) Encerrar o programa: \n\n");
          scanf("%d", &escolhaMenu);
         
-        printf("\033[0m");//fecha cor
+        printf("\033[0m");
          
  
 	switch (escolhaMenu) {
 	case 1: 
 		printf("\nInforme o codigo do pedido que desejado (A-G): ");
 		scanf(" %c", &codigoBusca);
-		codigoBusca = toupper(codigoBusca); //para ler como letras maiúsculo
+		codigoBusca = toupper(codigoBusca);
 		for (int i = 0; i < 4; i++) {
 		  	if (codigo[i] == codigoBusca) {
 				printf("\nPedido %d:", i + 1);
-				printf("\nValor do pedido: R$ %.2f", totalPedido[i]); //Valor do pedido, não total de tudo
+				printf("\nValor do pedido: R$ %.2f", totalPedido[i]);
 				printf("\nQuantidade de itens: %d", qtdItensPedido[i]);
 				printf("\nSexo do cliente: %c\n", sexo[i]);
 				achou = 1 ;
@@ -238,7 +238,7 @@ int main()
         
          case 3:
         printf("\nPrograma finalizado");
-        exit(0); //encerra o programa de vez, ignorando qualquer outra instrução.
+        exit(0); 
       
 	        
 	    } 
@@ -248,7 +248,7 @@ int main()
         
 
                 
-      }while(codigoResposta == 's' || codigoResposta == 'S'); //fechando o DO
+      }while(codigoResposta == 's' || codigoResposta == 'S'); 
     
   
 
